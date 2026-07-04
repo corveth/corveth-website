@@ -34,3 +34,5 @@ Then open http://localhost:8080 in a browser.
 GitHub Pages serves this repository's `main` branch directly — there is no build step.
 Pushes to `main` go live automatically. The `CNAME` file pins the custom domain to
 `corveth.ai`; DNS must point at GitHub Pages separately.
+
+<!-- trigger initial Pages build -->
