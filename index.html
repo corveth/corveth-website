@@ -69,11 +69,71 @@
       * { transition: none !important; }
     }
 
+    .nav-toggle-input { display: none; }
+    .nav-toggle-btn { display: none; }
+
     @media (max-width: 768px) {
       nav { padding: 0 20px; }
-      nav ul { gap: 20px; }
       .hero, section { padding-left: 20px; padding-right: 20px; }
       .hero > div[style*="display:flex"] { flex-wrap: wrap; }
+
+      .nav-toggle-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        z-index: 110;
+      }
+
+      .nav-toggle-btn span {
+        display: block;
+        height: 2px;
+        width: 100%;
+        background: var(--text);
+        border-radius: 2px;
+        transition: transform 0.2s, opacity 0.2s;
+      }
+
+      nav ul {
+        position: fixed;
+        top: 64px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        background: var(--bg2);
+        border-bottom: 1px solid var(--border);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.25s ease;
+      }
+
+      nav ul li { width: 100%; }
+
+      nav ul a {
+        display: block;
+        padding: 16px 20px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-toggle-input:checked ~ ul {
+        max-height: 320px;
+      }
+
+      .nav-toggle-input:checked ~ .nav-toggle-btn span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+
+      .nav-toggle-input:checked ~ .nav-toggle-btn span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .nav-toggle-input:checked ~ .nav-toggle-btn span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
     }
 
     .grad {
@@ -614,6 +674,10 @@
     </svg>
     <span class="nav-wordmark">corveth<span>.ai</span></span>
   </a>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle-input" />
+  <label for="nav-toggle" class="nav-toggle-btn" aria-hidden="true">
+    <span></span><span></span><span></span>
+  </label>
   <ul>
     <li><a href="#who-we-are">Who We Are</a></li>
     <li><a href="#what-we-do">What We Do</a></li>
