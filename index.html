@@ -554,6 +554,44 @@
       margin-bottom: 10px;
     }
 
+    .org-group {
+      margin-top: 48px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .org-header {
+      padding: 24px 32px;
+      background: var(--bg3);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .org-header p.section-label {
+      margin-bottom: 6px;
+    }
+
+    .org-header h3 {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      margin-bottom: 4px;
+    }
+
+    .org-header p.org-desc {
+      font-size: 15px;
+      color: var(--muted);
+    }
+
+    .org-projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1px;
+      background: var(--border);
+    }
+
+    .org-projects .project-card { background: var(--bg2); }
+
     .project-card p {
       font-size: 16px;
       color: var(--muted);
@@ -822,15 +860,30 @@
       <h3>wefindthem.org</h3>
       <p>Searches public data and interviews citizens around the world to identify victims of human trafficking — turning scattered signals into leads that can get real people found.</p>
     </div>
-    <div class="project-card">
-      <div class="project-status" style="color:var(--dim)">Pre-inception</div>
-      <h3>steadway.ai</h3>
-      <p>A life-testimony builder grounded in the NASB Bible. Takes raw, unstructured emotional or logical brain dumps and helps surface meaning in your life story you may not yet see.</p>
+  </div>
+
+  <div class="org-group">
+    <div class="org-header">
+      <p class="section-label">A Corveth ministry</p>
+      <h3>Of All Nations Ministries, Inc.</h3>
+      <p class="org-desc">A Corveth project in its own right, building Scripture-rooted media and tools under its own slate.</p>
     </div>
-    <div class="project-card">
-      <div class="project-status" style="color:var(--dim)">Pre-production</div>
-      <h3><a href="https://witnesses.kids" target="_blank" rel="noopener noreferrer" style="color:inherit; text-decoration:none;">Witnesses.Kids ↗</a></h3>
-      <p>A Sunday school kids' video series about what it actually means to obey Matthew 18:3 — and what the adults watching forgot. A project of Of All Nations Ministries.</p>
+    <div class="org-projects">
+      <div class="project-card">
+        <div class="project-status" style="color:var(--dim)">Pre-production</div>
+        <h3>Antediluvian</h3>
+        <p>A narrative adventure game placing players inside the world of Genesis — Eden, the Watchers, the rise of the Nephilim, and Noah's ark — making Scripture feel real, personal, and alive.</p>
+      </div>
+      <div class="project-card">
+        <div class="project-status" style="color:var(--dim)">Pre-production</div>
+        <h3><a href="https://witnesses.kids" target="_blank" rel="noopener noreferrer" style="color:inherit; text-decoration:none;">Witnesses.Kids ↗</a></h3>
+        <p>A Sunday school kids' video series about what it actually means to obey Matthew 18:3 — and what the adults watching forgot.</p>
+      </div>
+      <div class="project-card">
+        <div class="project-status" style="color:var(--dim)">Pre-inception</div>
+        <h3>steadway.ai</h3>
+        <p>A life-testimony builder grounded in the NASB Bible. Takes raw, unstructured emotional or logical brain dumps and helps surface meaning in your life story you may not yet see.</p>
+      </div>
     </div>
   </div>
 </section>
