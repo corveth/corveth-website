@@ -36,3 +36,4 @@ Pushes to `main` go live automatically. The `CNAME` file pins the custom domain 
 `corveth.ai`; DNS must point at GitHub Pages separately.
 
 <!-- trigger initial Pages build -->
+<!-- rebuild trigger after visibility change to public -->
